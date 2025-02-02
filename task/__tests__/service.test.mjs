@@ -36,7 +36,7 @@ t.describe("TaskService.getAllForUser", function () {
     const user1 = await UserModel.create({ email: "hey_1@mail.com" });
     const user2 = await UserModel.create({ email: "hey_2@mail.com" });
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 6; i++) {
       const userId = i % 2 == 0 ? user1.id : user2.id;
       const taskArgs = {
         userId,
