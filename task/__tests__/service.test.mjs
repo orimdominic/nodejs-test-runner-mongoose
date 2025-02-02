@@ -27,7 +27,7 @@ t.describe("TaskService.create", function () {
     assert.ok(task.createdAt);
     assert.equal(task.title, taskArgs.title);
     assert.equal(task.userId, taskArgs.userId);
-    assert.equal(task.title, taskArgs.description);
+    assert.equal(task.description, taskArgs.description);
   });
 });
 
