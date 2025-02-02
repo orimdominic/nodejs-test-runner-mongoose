@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-test-runner-mongoose",
+  "version": "1.0.0",
+  "description": "Sample for writing tests for MongoDB with the Node.js test runner and mongodb-memory-server",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "node.js",
+    "test",
+    "mongodb",
+    "mongodb-memory-server",
+    "typescript"
+  ],
+  "author": "Orim Dominic",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.4.0",
+    "mongodb-memory-server": "^9.1.6"
+  },
+  "dependencies": {
+    "mongoose": "^8.9.6"
+  }
+}
