@@ -1,0 +1,21 @@
+# nodejs-test-runner-mongoose
+
+## What you need
+
+1. Node.js >=18 and npm
+
+## Setting Up
+
+1. Clone the repository
+2. Install the project's dependencies
+```bash
+npm install
+```
+3. In the terminal at the root of the repository, run
+```
+node .
+```
+You should see output on the terminal telling you what Node.js version you are running. For example
+```bash
+You are running Node.js v22.13.1
+```
