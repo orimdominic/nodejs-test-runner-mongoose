@@ -52,8 +52,14 @@ t.describe("TaskService.getAllForUser", function () {
     assert.equal(user1Tasks.length, 2);
     assert.equal(user2Tasks.length, 2);
 
-    assert.equal(user1Tasks.every((t) => t.userId, user1.id, true));
-    assert.equal(user2Tasks.every((t) => t.userId, user2.id, true));
+    assert.equal(
+      user1Tasks.every((t) => t.userId, user1.id),
+      true,
+    );
+    assert.equal(
+      user2Tasks.every((t) => t.userId, user2.id),
+      true,
+    );
   });
 });
 
