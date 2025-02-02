@@ -77,8 +77,8 @@ t.describe("TaskService.getOneWithUser", function () {
       title: "Lorem ipsum",
     };
 
-    await service.create(taskArgs);
-    const found = await service.getOneWithUser(user.id);
+    const { id: taskId } = await service.create(taskArgs);
+    const found = await service.getOneWithUser(taskId);
 
     assert.ok(found.id);
     assert.ok(found.createdAt);
