@@ -84,7 +84,7 @@ t.describe("TaskService.getOneWithUser", function () {
     assert.ok(found.createdAt);
     assert.equal(found.title, taskArgs.title);
     assert.equal(found.userId, taskArgs.userId);
-    assert.equal(found.title, taskArgs.description);
+    assert.equal(found.description, "");
     assert.equal(found.user.id, user.id);
     assert.equal(found.user.email, user.email);
   });
