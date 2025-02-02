@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Sample for writing tests for MongoDB with the Node.js test runner and mongodb-memory-server",
   "main": "index.mjs",
+  "type": "module",
   "scripts": {
     "test": "node --test"
   },
