@@ -47,10 +47,10 @@ npm run test
 
 ℹ tests 8
 ℹ suites 5
-ℹ pass 8
-ℹ fail 0
+ℹ pass 0
+ℹ fail 8
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 941.768873
+ℹ duration_ms 1017.664253
 ```
