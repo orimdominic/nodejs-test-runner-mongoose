@@ -3,6 +3,7 @@
  * @property {string} DBTask.title
  * @property {string} DBTask.description
  * @property {string} DBTask.userId
+ * @property {"NOT_DONE" | "IN_PROGRESS" | "COMPLETED"} DBTask.status
  * @property {Date} DBTask.createdAt
  */
 
@@ -28,6 +29,7 @@ export async function getAllForUser(userId) {}
  * @property {string} DBTaskWithUser.title
  * @property {string} DBTaskWithUser.description
  * @property {string} DBTaskWithUser.userId
+ * @property {"NOT_DONE" | "IN_PROGRESS" | "COMPLETED"} DBTaskWithUser.status
  * @property {string} DBTaskWithUser.user.email
  * @property {string} DBTaskWithUser.user.id
  * @property {Date} DBTaskWithUser.createdAt

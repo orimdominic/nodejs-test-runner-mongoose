@@ -27,6 +27,7 @@ t.describe("TaskService.create", function () {
     assert.ok(task.createdAt);
     assert.equal(task.title, taskArgs.title);
     assert.equal(task.userId, taskArgs.userId);
+    assert.equal(task.status, "NOT_DONE");
     assert.equal(task.title, taskArgs.description);
   });
 });
@@ -68,8 +69,6 @@ t.describe("TaskService.getOneWithUser", function () {
     const taskArgs = {
       userId: user.id,
       title: "Lorem ipsum",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
     };
 
     await service.create(taskArgs);
