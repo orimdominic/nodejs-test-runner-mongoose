@@ -38,7 +38,7 @@ const schema = new Schema(
   },
 );
 
-schema.virtual("expert", {
+schema.virtual("user", {
   ref: "User",
   localField: "userId",
   foreignField: "_id",
