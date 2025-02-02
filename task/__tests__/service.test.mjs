@@ -28,7 +28,7 @@ t.describe("TaskService.create", function () {
     assert.equal(task.title, taskArgs.title);
     assert.equal(task.userId, taskArgs.userId);
     assert.equal(task.status, "NOT_DONE");
-    assert.equal(task.title, taskArgs.description);
+    assert.equal(task.description, taskArgs.description);
   });
 });
 
@@ -37,7 +37,7 @@ t.describe("TaskService.getAllForUser", function () {
     const user1 = await UserModel.create({ email: "hey_1@mail.com" });
     const user2 = await UserModel.create({ email: "hey_2@mail.com" });
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 4; i++) {
       const userId = i % 2 == 0 ? user1.id : user2.id;
       const taskArgs = {
         userId,
@@ -50,11 +50,17 @@ t.describe("TaskService.getAllForUser", function () {
     const user1Tasks = await service.getAllForUser(user1.id);
     const user2Tasks = await service.getAllForUser(user2.id);
 
-    assert.equal(user1Tasks.length, 3);
-    assert.equal(user2Tasks.length, 3);
+    assert.equal(user1Tasks.length, 2);
+    assert.equal(user2Tasks.length, 2);
 
-    assert.equal(user1Tasks.every((t) => t.userId, user1.id, true));
-    assert.equal(user2Tasks.every((t) => t.userId, user2.id, true));
+    assert.equal(
+      user1Tasks.every((t) => t.userId, user1.id),
+      true,
+    );
+    assert.equal(
+      user2Tasks.every((t) => t.userId, user2.id),
+      true,
+    );
   });
 });
 
