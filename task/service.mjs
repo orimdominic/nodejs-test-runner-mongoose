@@ -1,3 +1,5 @@
+import { TaskModel } from "./model.mjs";
+
 /**
  * @typedef {Object} DBTask
  * @property {string} DBTask.title
@@ -15,14 +17,22 @@
  *
  * @returns {Promise<DBTask>}
  */
-export async function create(task) {}
+export async function create(task) {
+  const t = await TaskModel.create(task);
+
+  return t.toObject();
+}
 
 /**
  * @param {string} userId
  *
  * @returns {Promise<Array<DBTask>>}
  */
-export async function getAllForUser(userId) {}
+export async function getAllForUser(userId) {
+  const tasks = await TaskModel.find({ userId }, null, { lean: true });
+
+  return tasks;
+}
 
 /**
  * @typedef {Object} DBTaskWithUser
@@ -40,4 +50,14 @@ export async function getAllForUser(userId) {}
  *
  * @returns {Promise<DBTaskWithUser>}
  */
-export async function getOneWithUser(taskId) {}
+export async function getOneWithUser(taskId) {
+  const task = await TaskModel.findById(taskId, null, {
+    populate: "user",
+  });
+
+  if (!task) {
+    throw new Error("Task not found");
+  }
+
+  return task.toObject();
+}

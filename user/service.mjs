@@ -1,3 +1,5 @@
+import { UserModel } from "./model.mjs";
+
 /**
  * @typedef {Object} DBUser
  * @property {string} DBTask.email
@@ -10,7 +12,16 @@
  *
  * @returns {Promise<DBUser>}
  */
-export async function create(email) {}
+export async function create(email) {
+  const emailExists = await UserModel.exists({ email: email.toLowerCase() });
+  if (emailExists) {
+    throw new Error("Duplicate email");
+  }
+
+  const user = await UserModel.create({ email });
+
+  return user.toObject();
+}
 
 /**
  * @typedef {Object} DBUserWithTotalTasks
@@ -24,4 +35,6 @@ export async function create(email) {}
  *
  * @returns {Promise<DBUserWithTotalTasks>}
  */
-export async function getById(userId) {}
+export async function getById(userId) {
+  // TODO
+}
