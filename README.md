@@ -32,3 +32,25 @@ You should also see details of the user and the task created.
 Created user with id 679f1d7f73fbeaf23b2007df
 Created task "Task title" for user with id "679f1d7f73fbeaf23b2007df"
 ```
+
+## Tests
+
+At this point, you can run tests for the project using the npm `test` script in `package.json`
+
+```bash
+npm run test
+
+> nodejs-test-runner-mongoose@1.0.0 test
+> node --test --import ./test.setup.mjs
+
+...
+
+ℹ tests 8
+ℹ suites 5
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 941.768873
+```

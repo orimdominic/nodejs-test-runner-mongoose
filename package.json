@@ -5,7 +5,7 @@
   "main": "index.mjs",
   "type": "module",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test --import ./test.setup.mjs"
   },
   "keywords": [
     "node.js",
@@ -17,7 +17,6 @@
   "author": "Orim Dominic",
   "license": "ISC",
   "devDependencies": {
-    "@faker-js/faker": "^9.4.0",
     "mongodb-memory-server": "^9.1.6"
   },
   "dependencies": {
