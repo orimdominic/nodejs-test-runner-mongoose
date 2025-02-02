@@ -2,7 +2,8 @@
 
 ## What you need
 
-1. Node.js >=18 and npm
+1. [Node.js](https://nodejs.org/en) >=v18 and npm
+2. [MongoDB](https://www.mongodb.com/) >=v7.0.14
 
 ## Setting Up
 
