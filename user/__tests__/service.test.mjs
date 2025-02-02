@@ -24,6 +24,8 @@ t.describe("UserService.create", function () {
   });
 
   t.it("throws an error when email exists already", async function () {
+    await service.create(email);
+
     return assert.rejects(service.create(email));
   });
 });
