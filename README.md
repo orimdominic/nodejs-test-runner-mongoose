@@ -25,7 +25,9 @@ You should see output on the terminal telling you what Node.js version you are r
 ```bash
 You are running Node.js v22.13.1
 ```
+
 You should also see details of the user and the task created.
+
 ```bash
 Created user with id 679f1d7f73fbeaf23b2007df
 Created task "Task title" for user with id "679f1d7f73fbeaf23b2007df"
