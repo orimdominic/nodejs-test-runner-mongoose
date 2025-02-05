@@ -17,7 +17,7 @@ npm install
 3. In the terminal at the root of the repository, run
 
 ```
-node .
+npm run start
 ```
 
 You should see output on the terminal telling you what Node.js version you are running. For example
@@ -41,16 +41,16 @@ At this point, you can run tests for the project using the npm `test` script in 
 npm run test
 
 > nodejs-test-runner-mongoose@1.0.0 test
-> node --test --import ./test.setup.mjs
+> node --test --experimental-strip-types --import tsx --import ./test.setup.mjs
 
 ...
 
-ℹ tests 8
-ℹ suites 5
+ℹ tests 7
+ℹ suites 4
 ℹ pass 6
-ℹ fail 2
+ℹ fail 0
 ℹ cancelled 0
-ℹ skipped 0
+ℹ skipped 1
 ℹ todo 0
-ℹ duration_ms 3418.86502
+ℹ duration_ms 2163.071006
 ```

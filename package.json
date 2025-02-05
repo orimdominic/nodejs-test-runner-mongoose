@@ -5,6 +5,7 @@
   "main": "index.ts",
   "type": "module",
   "scripts": {
+    "start": "tsx index.ts",
     "test": "node --test --experimental-strip-types --import tsx --import ./test.setup.mjs "
   },
   "keywords": [
