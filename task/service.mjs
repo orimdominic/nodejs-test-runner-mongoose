@@ -3,7 +3,7 @@
  * @property {string} DBTask.title
  * @property {string} DBTask.description
  * @property {string} DBTask.userId
- * @property {string} DBTask.createdAt
+ * @property {Date} DBTask.createdAt
  */
 
 /**
@@ -30,7 +30,7 @@ export async function getAllForUser(userId) {}
  * @property {string} DBTaskWithUser.userId
  * @property {string} DBTaskWithUser.user.email
  * @property {string} DBTaskWithUser.user.id
- * @property {string} DBTaskWithUser.createdAt
+ * @property {Date} DBTaskWithUser.createdAt
  */
 
 /**
