@@ -45,12 +45,12 @@ npm run test
 
 ...
 
-ℹ tests 8
-ℹ suites 5
+ℹ tests 7
+ℹ suites 4
 ℹ pass 6
-ℹ fail 2
+ℹ fail 0
 ℹ cancelled 0
-ℹ skipped 0
+ℹ skipped 1
 ℹ todo 0
-ℹ duration_ms 3418.86502
+ℹ duration_ms 1648.985441
 ```
