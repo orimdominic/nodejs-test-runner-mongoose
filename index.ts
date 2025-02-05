@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import { TaskModel } from "./task/model.mjs";
-import { UserModel } from "./user/model.mjs";
+import { TaskModel } from "./task/model";
+import { UserModel } from "./user/model";
 
 console.log(`You are running Node.js ${process.version}`);
 

@@ -1,6 +1,19 @@
 import { Schema, model } from "mongoose";
 
-const schema = new Schema(
+interface Task {
+  id: string;
+  title: string;
+  description: string;
+  userId: string;
+  status: "NOT_DONE" | "IN_PROGRESS" | "COMPLETED";
+  createdAt: Date;
+  user?: {
+    id: string;
+    email: string;
+  };
+}
+
+const schema = new Schema<Task>(
   {
     title: {
       type: String,
@@ -15,10 +28,11 @@ const schema = new Schema(
       enum: ["NOT_DONE", "IN_PROGRESS", "COMPLETED"],
       default: "NOT_DONE",
     },
+    // @ts-expect-error this works because of the return value of the `get` function
     userId: {
       type: Schema.Types.ObjectId,
       required: true,
-      get: (v) => `${v}`,
+      get: (v: Schema.Types.ObjectId) => `${v}`,
       ref: "User",
     },
   },

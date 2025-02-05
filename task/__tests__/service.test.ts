@@ -3,8 +3,8 @@ import assert from "node:assert/strict";
 
 import { Types } from "mongoose";
 
-import * as service from "../service.mjs";
-import { UserModel } from "../../user/model.mjs";
+import * as service from "../service";
+import { UserModel } from "../../user/model";
 
 t.beforeEach(async function () {
   await UserModel.deleteMany({});
@@ -85,7 +85,7 @@ t.describe("TaskService.getOneWithUser", function () {
     assert.equal(found.title, taskArgs.title);
     assert.equal(found.userId, taskArgs.userId);
     assert.equal(found.description, "");
-    assert.equal(found.user.id, user.id);
-    assert.equal(found.user.email, user.email);
+    assert.equal(found.user?.id, user.id);
+    assert.equal(found.user?.email, user.email);
   });
 });

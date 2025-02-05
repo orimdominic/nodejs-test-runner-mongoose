@@ -2,10 +2,10 @@
   "name": "nodejs-test-runner-mongoose",
   "version": "1.0.0",
   "description": "Sample for writing tests for MongoDB with the Node.js test runner and mongodb-memory-server",
-  "main": "index.mjs",
+  "main": "index.ts",
   "type": "module",
   "scripts": {
-    "test": "node --test --import ./test.setup.mjs"
+    "test": "node --test --experimental-strip-types --import tsx --import ./test.setup.mjs "
   },
   "keywords": [
     "node.js",
@@ -20,6 +20,8 @@
     "mongodb-memory-server": "^9.1.6"
   },
   "dependencies": {
-    "mongoose": "^8.9.6"
+    "mongoose": "^8.9.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
   }
 }
