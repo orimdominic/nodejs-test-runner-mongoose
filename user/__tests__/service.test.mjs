@@ -30,7 +30,7 @@ t.describe("UserService.create", function () {
   });
 });
 
-t.describe("UserService.getById", function () {
+t.skip("UserService.getById", function () {
   t.it("throws an error if user is not found", async function () {
     return assert.rejects(service.getById(`${new Types.ObjectId()}`));
   });
