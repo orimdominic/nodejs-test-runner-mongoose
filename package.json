@@ -18,11 +18,11 @@
   "author": "Orim Dominic",
   "license": "ISC",
   "devDependencies": {
-    "mongodb-memory-server": "^9.1.6"
+    "mongodb-memory-server": "^9.1.6",
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "mongoose": "^8.9.6",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.3"
+    "tsx": "^4.19.2"
   }
 }
