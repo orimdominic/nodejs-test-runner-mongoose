@@ -48,7 +48,7 @@ t.describe("UserService.getById", function () {
         title: "Lorem ipsum",
       };
 
-      await service.create(taskArgs);
+      await TaskModel.create(taskArgs);
     }
 
     const user = await service.getById(userId);
