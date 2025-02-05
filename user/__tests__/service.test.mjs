@@ -41,7 +41,8 @@ t.describe("UserService.getById", function () {
     const email = "Hey@Mail.com";
     const { id: userId } = await service.create(email);
 
-    for (let i = 0; i < 3; i++) {
+    const totalTasks = 3;
+    for (let i = 0; i < totalTasks; i++) {
       const taskArgs = {
         userId: userId,
         title: "Lorem ipsum",
@@ -54,7 +55,7 @@ t.describe("UserService.getById", function () {
 
     assert.equal(user.id, userId);
     assert.ok(user.createdAt);
-    assert.equal(user.totalTasks, 3);
+    assert.equal(user.totalTasks, totalTasks);
     assert.equal(user.email, email.toLowerCase());
   });
 });
